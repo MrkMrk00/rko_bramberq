@@ -27,4 +27,5 @@ seq(3, 15, 4)
 u <- 1:10
 
 # 10)
-x <- floor(runif(10, max = 100))
+# x <- floor(runif(10, max = 100))
+x <- sample(1:99, 10)
