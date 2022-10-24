@@ -52,3 +52,6 @@ require('weathermetrics')
 mutate(data, Avgtemperaturefahrenheit = celsius.to.fahrenheit(Avgtemperature))
 
 # 3)
+group_by(data, Hh_ID) %>%
+    summarise(avgVol = mean(Volume), avgTemp = mean(Avgtemperature), avgDur = mean(Showertime)) %>%
+    arrange(Hh_ID)
