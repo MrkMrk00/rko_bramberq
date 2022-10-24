@@ -55,3 +55,13 @@ mutate(data, Avgtemperaturefahrenheit = celsius.to.fahrenheit(Avgtemperature))
 group_by(data, Hh_ID) %>%
     summarise(avgVol = mean(Volume), avgTemp = mean(Avgtemperature), avgDur = mean(Showertime)) %>%
     arrange(Hh_ID)
+
+# Exercise III
+# 1)
+group_by(data, Hh_ID) %>%
+    summarise(avgVol = mean(Volume), avgTemp = mean(Avgtemperature), avgDur = mean(Showertime)) %>%
+    arrange(Hh_ID)
+
+# 2)
+# group_by(data, Hh_ID) %>%
+#     mutate(., countOcc = count(., Hh_ID))
