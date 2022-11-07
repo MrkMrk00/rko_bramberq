@@ -63,5 +63,11 @@ group_by(data, Hh_ID) %>%
     arrange(Hh_ID)
 
 # 2)
-# group_by(data, Hh_ID) %>%
-#     mutate(., countOcc = count(., Hh_ID))
+count(data, Hh_ID) %>%
+    filter(n > 50) %>%
+    nrow()
+
+# 3)
+group_by(data, group) %>%
+    count(Hh_ID) %>%
+    summarise(avgNum = mean(length(Hh_ID)))
