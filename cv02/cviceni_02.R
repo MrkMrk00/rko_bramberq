@@ -71,4 +71,3 @@ count(data, Hh_ID) %>%
 group_by(data, group) %>%
     count(Hh_ID) %>%
     summarise(avgNum = mean(n))
-    summarise(avgNum = mean(n))
